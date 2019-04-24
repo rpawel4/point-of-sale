@@ -19,7 +19,7 @@ public class LCDDisplay implements Display {
 
 	@Override
 	public void printMessage(DisplayedMessage message) {
-		System.out.println("LCD: "+message);
+		System.out.println("LCD: "+message.getMessage());
 	}
 
 	@Override

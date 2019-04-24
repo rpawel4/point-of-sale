@@ -45,7 +45,7 @@ public class PointOfSale {
 		try {
 			Product product = productService.getProduct(barcode);
 			addProduct(product, BigDecimal.ONE);
-
+			display.printProduct(product);
 		} catch (InvalidCodeException e) {
 			e.printStackTrace();
 			display.printMessage(DisplayedMessage.INVALID);
@@ -67,6 +67,10 @@ public class PointOfSale {
 	public void finishCientService() {
 		printer.printReceipt(receipt);
 		display.printTotalPrice(receipt);
+	}
+	
+	public int getNUmberOfItems() {
+		return receipt.getItems().size();
 	}
 
 }
