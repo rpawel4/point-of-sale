@@ -20,6 +20,11 @@
 - Java 8
 - JUnit 4
 - Mockito
+- System Rules
+- Maven
 
+## Running the tests
+Because app mocks database and IO devices you can check how it works simply through tests. The app uses Maven, so to run tests use command: 
+<br />`mvn test`
 
 
